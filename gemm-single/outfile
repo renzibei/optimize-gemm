@@ -1,0 +1,663 @@
+GPTL version info: 8.0.3
+WARNING: GPTLerror was called at least once during the run.
+Please examine your output for error messages beginning with GPTL...
+GPTL was built without threading
+HAVE_LIBMPI was true
+  ENABLE_PMPI was true
+HAVE_PAPI was true
+  PAPI event multiplexing was OFF
+Description of printed events (PAPI and derived):
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+PAPI events enabled (including those required for derived events):
+  CPU_CYCLES
+  L1D_CACHE
+  L1D_CACHE_REFILL
+  L2D_CACHE_ACCESS
+  MEM_STALL_ANYLOAD
+  MEM_STALL_ANYSTORE
+
+ENABLE_NESTEDOMP was false
+Autoprofiling capability was enabled with backtrace
+Underlying timing routine was gettimeofday.
+GPTLget_overhead: using hash entry 896=gemm for getentry estimate
+Total overhead of 1 GPTL start or GPTLstop call=9.94e-07 seconds
+Components are as follows:
+Fortran layer:             1.0e-09 =   0.1% of total
+Get thread number:         7.0e-09 =   0.7% of total
+Generate hash index:       7.0e-09 =   0.7% of total
+Find hashtable entry:      1.2e-08 =   1.2% of total
+Underlying timing routine: 4.1e-08 =   4.1% of total
+Misc start/stop functions: 3.0e-09 =   0.3% of total
+Read PAPI counters:        9.2e-07 =  92.9% of total
+
+Overhead of backtrace (invoked once per auto-instrumented start entry)=4e-06 seconds
+NOTE: If GPTL is called from C not Fortran, the 'Fortran layer' overhead is zero
+NOTE: For calls to GPTLstart_handle()/GPTLstop_handle(), the 'Generate hash index' overhead is zero
+NOTE: For auto-instrumented calls, the cost of generating the hash index plus finding
+      the hashtable entry is 0.0e+00 not the 1.9e-08 portion taken by GPTLstart
+NOTE: Each hash collision roughly doubles the 'Find hashtable entry' cost of that timer
+
+If overhead stats are printed, they are the columns labeled self_OH and parent_OH
+self_OH is estimated as 2X the Fortran layer cost (start+stop) plust the cost of 
+a single call to the underlying timing routine.
+parent_OH is the overhead for the named timer which is subsumed into its parent.
+It is estimated as the cost of a single GPTLstart()/GPTLstop() pair.
+Print method was most_frequent.
+
+If a AVG_MPI_BYTES field is present, it is an estimate of the per-call
+average number of bytes handled by that process.
+If timers beginning with sync_ are present, it means MPI synchronization was turned on.
+
+If a '%_of' field is present, it is w.r.t. the first timer for thread 0.
+If a 'e6_per_sec' field is present, it is in millions of PAPI counts per sec.
+
+A '*' in column 1 below means the timer had multiple parents, though the values
+printed are for all calls. Multiple parent stats appear later in the file in the
+section titled 'Multiple parent info'
+A '!' in column 1 means the timer is currently ON and the printed timings are only
+valid as of the previous GPTLstop. '!' overrides '*' if the region had multiple
+parents and was currently ON.
+
+Process size=93.312500 MB rss=57.625000 MB
+
+Stats for thread 0:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+  gemm          28     -      17.131    8.282    0.208    0.000    0.000       -       4.45e+10 2.03e+10 3.77e+08 9.99e+09 8.88e+09     1583
+
+Overhead sum =  5.56e-05 wallclock seconds
+Total calls  = 28
+
+Stats for thread 1:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 2:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 3:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 4:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 5:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 6:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 7:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 8:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 9:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 10:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 11:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 12:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 13:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 14:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 15:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 16:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 17:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 18:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 19:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 20:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 21:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 22:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 23:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 24:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 25:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 26:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 27:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 28:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 29:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 30:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 31:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 32:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 33:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 34:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 35:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 36:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 37:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 38:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 39:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 40:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 41:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 42:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 43:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 44:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 45:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 46:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 47:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 48:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 49:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 50:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 51:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 52:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 53:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 54:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 55:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 56:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 57:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 58:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 59:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 60:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 61:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 62:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 63:
+            Called  Recurse     Wall      max      min   selfOH parentOH AVG_MPI_BYTES    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Same stats sorted by timer for threaded regions:
+Thd    Called  Recurse     Wall      max      min   selfOH parentOH    YCLES     ACHE ACHE_REF ACHE_ACC TALL_ANY TALL_ANY
+OVERHEAD.000 (wallclock seconds) =  5.56e-05
+OVERHEAD.001 (wallclock seconds) =         0
+OVERHEAD.002 (wallclock seconds) =         0
+OVERHEAD.003 (wallclock seconds) =         0
+OVERHEAD.004 (wallclock seconds) =         0
+OVERHEAD.005 (wallclock seconds) =         0
+OVERHEAD.006 (wallclock seconds) =         0
+OVERHEAD.007 (wallclock seconds) =         0
+OVERHEAD.008 (wallclock seconds) =         0
+OVERHEAD.009 (wallclock seconds) =         0
+OVERHEAD.010 (wallclock seconds) =         0
+OVERHEAD.011 (wallclock seconds) =         0
+OVERHEAD.012 (wallclock seconds) =         0
+OVERHEAD.013 (wallclock seconds) =         0
+OVERHEAD.014 (wallclock seconds) =         0
+OVERHEAD.015 (wallclock seconds) =         0
+OVERHEAD.016 (wallclock seconds) =         0
+OVERHEAD.017 (wallclock seconds) =         0
+OVERHEAD.018 (wallclock seconds) =         0
+OVERHEAD.019 (wallclock seconds) =         0
+OVERHEAD.020 (wallclock seconds) =         0
+OVERHEAD.021 (wallclock seconds) =         0
+OVERHEAD.022 (wallclock seconds) =         0
+OVERHEAD.023 (wallclock seconds) =         0
+OVERHEAD.024 (wallclock seconds) =         0
+OVERHEAD.025 (wallclock seconds) =         0
+OVERHEAD.026 (wallclock seconds) =         0
+OVERHEAD.027 (wallclock seconds) =         0
+OVERHEAD.028 (wallclock seconds) =         0
+OVERHEAD.029 (wallclock seconds) =         0
+OVERHEAD.030 (wallclock seconds) =         0
+OVERHEAD.031 (wallclock seconds) =         0
+OVERHEAD.032 (wallclock seconds) =         0
+OVERHEAD.033 (wallclock seconds) =         0
+OVERHEAD.034 (wallclock seconds) =         0
+OVERHEAD.035 (wallclock seconds) =         0
+OVERHEAD.036 (wallclock seconds) =         0
+OVERHEAD.037 (wallclock seconds) =         0
+OVERHEAD.038 (wallclock seconds) =         0
+OVERHEAD.039 (wallclock seconds) =         0
+OVERHEAD.040 (wallclock seconds) =         0
+OVERHEAD.041 (wallclock seconds) =         0
+OVERHEAD.042 (wallclock seconds) =         0
+OVERHEAD.043 (wallclock seconds) =         0
+OVERHEAD.044 (wallclock seconds) =         0
+OVERHEAD.045 (wallclock seconds) =         0
+OVERHEAD.046 (wallclock seconds) =         0
+OVERHEAD.047 (wallclock seconds) =         0
+OVERHEAD.048 (wallclock seconds) =         0
+OVERHEAD.049 (wallclock seconds) =         0
+OVERHEAD.050 (wallclock seconds) =         0
+OVERHEAD.051 (wallclock seconds) =         0
+OVERHEAD.052 (wallclock seconds) =         0
+OVERHEAD.053 (wallclock seconds) =         0
+OVERHEAD.054 (wallclock seconds) =         0
+OVERHEAD.055 (wallclock seconds) =         0
+OVERHEAD.056 (wallclock seconds) =         0
+OVERHEAD.057 (wallclock seconds) =         0
+OVERHEAD.058 (wallclock seconds) =         0
+OVERHEAD.059 (wallclock seconds) =         0
+OVERHEAD.060 (wallclock seconds) =         0
+OVERHEAD.061 (wallclock seconds) =         0
+OVERHEAD.062 (wallclock seconds) =         0
+OVERHEAD.063 (wallclock seconds) =         0
+OVERHEAD.SUM (wallclock seconds) =  5.56e-05
+thread 0 long name translations (empty when no auto-instrumentation):
+thread 1 long name translations (empty when no auto-instrumentation):
+thread 2 long name translations (empty when no auto-instrumentation):
+thread 3 long name translations (empty when no auto-instrumentation):
+thread 4 long name translations (empty when no auto-instrumentation):
+thread 5 long name translations (empty when no auto-instrumentation):
+thread 6 long name translations (empty when no auto-instrumentation):
+thread 7 long name translations (empty when no auto-instrumentation):
+thread 8 long name translations (empty when no auto-instrumentation):
+thread 9 long name translations (empty when no auto-instrumentation):
+thread 10 long name translations (empty when no auto-instrumentation):
+thread 11 long name translations (empty when no auto-instrumentation):
+thread 12 long name translations (empty when no auto-instrumentation):
+thread 13 long name translations (empty when no auto-instrumentation):
+thread 14 long name translations (empty when no auto-instrumentation):
+thread 15 long name translations (empty when no auto-instrumentation):
+thread 16 long name translations (empty when no auto-instrumentation):
+thread 17 long name translations (empty when no auto-instrumentation):
+thread 18 long name translations (empty when no auto-instrumentation):
+thread 19 long name translations (empty when no auto-instrumentation):
+thread 20 long name translations (empty when no auto-instrumentation):
+thread 21 long name translations (empty when no auto-instrumentation):
+thread 22 long name translations (empty when no auto-instrumentation):
+thread 23 long name translations (empty when no auto-instrumentation):
+thread 24 long name translations (empty when no auto-instrumentation):
+thread 25 long name translations (empty when no auto-instrumentation):
+thread 26 long name translations (empty when no auto-instrumentation):
+thread 27 long name translations (empty when no auto-instrumentation):
+thread 28 long name translations (empty when no auto-instrumentation):
+thread 29 long name translations (empty when no auto-instrumentation):
+thread 30 long name translations (empty when no auto-instrumentation):
+thread 31 long name translations (empty when no auto-instrumentation):
+thread 32 long name translations (empty when no auto-instrumentation):
+thread 33 long name translations (empty when no auto-instrumentation):
+thread 34 long name translations (empty when no auto-instrumentation):
+thread 35 long name translations (empty when no auto-instrumentation):
+thread 36 long name translations (empty when no auto-instrumentation):
+thread 37 long name translations (empty when no auto-instrumentation):
+thread 38 long name translations (empty when no auto-instrumentation):
+thread 39 long name translations (empty when no auto-instrumentation):
+thread 40 long name translations (empty when no auto-instrumentation):
+thread 41 long name translations (empty when no auto-instrumentation):
+thread 42 long name translations (empty when no auto-instrumentation):
+thread 43 long name translations (empty when no auto-instrumentation):
+thread 44 long name translations (empty when no auto-instrumentation):
+thread 45 long name translations (empty when no auto-instrumentation):
+thread 46 long name translations (empty when no auto-instrumentation):
+thread 47 long name translations (empty when no auto-instrumentation):
+thread 48 long name translations (empty when no auto-instrumentation):
+thread 49 long name translations (empty when no auto-instrumentation):
+thread 50 long name translations (empty when no auto-instrumentation):
+thread 51 long name translations (empty when no auto-instrumentation):
+thread 52 long name translations (empty when no auto-instrumentation):
+thread 53 long name translations (empty when no auto-instrumentation):
+thread 54 long name translations (empty when no auto-instrumentation):
+thread 55 long name translations (empty when no auto-instrumentation):
+thread 56 long name translations (empty when no auto-instrumentation):
+thread 57 long name translations (empty when no auto-instrumentation):
+thread 58 long name translations (empty when no auto-instrumentation):
+thread 59 long name translations (empty when no auto-instrumentation):
+thread 60 long name translations (empty when no auto-instrumentation):
+thread 61 long name translations (empty when no auto-instrumentation):
+thread 62 long name translations (empty when no auto-instrumentation):
+thread 63 long name translations (empty when no auto-instrumentation):
+
+Total GPTL memory usage = 1113.42 KB
+Components:
+Hashmem                 = 1047.56 KB
+Regionmem               = 0.32 KB (papimem portion = 0.096 KB)
+Parent/child arrays     = 0.008 KB
+Callstackmem            = 65.536 KB
+
+Thread mapping:
+GPTLthreadid[0] = 0
+GPTLthreadid[1] = -1
+GPTLthreadid[2] = -1
+GPTLthreadid[3] = -1
+GPTLthreadid[4] = -1
+GPTLthreadid[5] = -1
+GPTLthreadid[6] = -1
+GPTLthreadid[7] = -1
+GPTLthreadid[8] = -1
+GPTLthreadid[9] = -1
+GPTLthreadid[10] = -1
+GPTLthreadid[11] = -1
+GPTLthreadid[12] = -1
+GPTLthreadid[13] = -1
+GPTLthreadid[14] = -1
+GPTLthreadid[15] = -1
+GPTLthreadid[16] = -1
+GPTLthreadid[17] = -1
+GPTLthreadid[18] = -1
+GPTLthreadid[19] = -1
+GPTLthreadid[20] = -1
+GPTLthreadid[21] = -1
+GPTLthreadid[22] = -1
+GPTLthreadid[23] = -1
+GPTLthreadid[24] = -1
+GPTLthreadid[25] = -1
+GPTLthreadid[26] = -1
+GPTLthreadid[27] = -1
+GPTLthreadid[28] = -1
+GPTLthreadid[29] = -1
+GPTLthreadid[30] = -1
+GPTLthreadid[31] = -1
+GPTLthreadid[32] = -1
+GPTLthreadid[33] = -1
+GPTLthreadid[34] = -1
+GPTLthreadid[35] = -1
+GPTLthreadid[36] = -1
+GPTLthreadid[37] = -1
+GPTLthreadid[38] = -1
+GPTLthreadid[39] = -1
+GPTLthreadid[40] = -1
+GPTLthreadid[41] = -1
+GPTLthreadid[42] = -1
+GPTLthreadid[43] = -1
+GPTLthreadid[44] = -1
+GPTLthreadid[45] = -1
+GPTLthreadid[46] = -1
+GPTLthreadid[47] = -1
+GPTLthreadid[48] = -1
+GPTLthreadid[49] = -1
+GPTLthreadid[50] = -1
+GPTLthreadid[51] = -1
+GPTLthreadid[52] = -1
+GPTLthreadid[53] = -1
+GPTLthreadid[54] = -1
+GPTLthreadid[55] = -1
+GPTLthreadid[56] = -1
+GPTLthreadid[57] = -1
+GPTLthreadid[58] = -1
+GPTLthreadid[59] = -1
+GPTLthreadid[60] = -1
+GPTLthreadid[61] = -1
+GPTLthreadid[62] = -1
+GPTLthreadid[63] = -1
